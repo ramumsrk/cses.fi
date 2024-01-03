@@ -1,0 +1,27 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile C++ source files using /usr/bin/g++",
+      "type": "shell",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-I",
+        "${fileDirname}/../include",
+        "-std=c++23",
+        "--verbose",
+        "-fdiagnostics-color=always",
+        "-o",
+        "${fileDirname}/../bin/${fileBasename}.g++.o",
+        "${file}"
+      ],
+      "problemMatcher":"$gcc",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    }
+  ]
+}

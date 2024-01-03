@@ -1,0 +1,6 @@
+# Ignore object files obtained from
+# compiling and linking
+*.o
+# Ignore `bin/` and `debug/` directories
+bin/
+debug/
